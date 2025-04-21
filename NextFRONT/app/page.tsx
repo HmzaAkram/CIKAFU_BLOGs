@@ -4,11 +4,15 @@ import SearchBar from "@/components/search/search-bar"
 import CategoryFilter from "@/components/search/category-filter"
 import { Skeleton } from "@/components/ui/skeleton"
 import HeroSection from "@/components/home/hero-section"
+import TestApi from '../components/TestApi'; // yeh theek hai
 
 export default function HomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <HeroSection />
+
+      {/* API Test Output */}
+      <TestApi />
 
       <div className="my-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <h2 className="text-3xl font-bold">Latest Articles</h2>

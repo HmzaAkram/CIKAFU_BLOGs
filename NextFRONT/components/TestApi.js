@@ -1,14 +1,18 @@
-'use client'; // agar Next.js 13+ use kar raha hai
-
 import { useEffect } from 'react';
 
-export default function TestApi() {
+const TestApi = () => {
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/ping') // <-- Laravel API
+    fetch('http://localhost:8000/api/ping')
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => console.log('Response from Laravel:', data))
       .catch(err => console.error('Error:', err));
   }, []);
 
-  return <div>Check console for API response</div>;
-}
+  return (
+    <div>
+      <h1>Testing API</h1>
+    </div>
+  );
+};
+
+export default TestApi;
